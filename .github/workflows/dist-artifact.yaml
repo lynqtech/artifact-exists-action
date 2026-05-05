@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v3
         with:
           node-version-file: ".nvmrc"
@@ -37,7 +37,7 @@ jobs:
     outputs:
       has-dist: ${{ steps.check_dist.outputs.exists }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: "./"
         name: "Check dist exists"
         id: check_dist

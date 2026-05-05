@@ -6,7 +6,7 @@ jobs:
   run-local-action:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Store Workflow
         uses: actions/upload-artifact@v4
         with:
@@ -40,7 +40,7 @@ jobs:
   run-v0-action:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Store Workflow
         uses: actions/upload-artifact@v4
         with:
