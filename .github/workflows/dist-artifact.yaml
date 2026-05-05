@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -25,7 +25,7 @@ jobs:
       - name: Rebuild the dist/ directory
         run: npm run build
       - name: Store Dist
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: "dist"
           path: "dist/"
@@ -37,7 +37,7 @@ jobs:
     outputs:
       has-dist: ${{ steps.check_dist.outputs.exists }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: "./"
         name: "Check dist exists"
         id: check_dist

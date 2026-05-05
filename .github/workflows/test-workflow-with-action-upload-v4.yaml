@@ -6,9 +6,9 @@ jobs:
   run-local-action:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Store Workflow
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: "test-workflow"
           path: ".github/workflows/test-workflow-with-action-upload-v3.yaml"
@@ -40,9 +40,9 @@ jobs:
   run-v0-action:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Store Workflow
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: "test-workflow"
           path: ".github/workflows/test-workflow-with-action-upload-v3.yaml"
